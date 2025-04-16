@@ -1,0 +1,6 @@
+libftTester/
+*.o
+*.a
+*.exe
+*.out
+.DS_Store
