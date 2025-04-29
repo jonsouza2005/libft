@@ -6,7 +6,7 @@
 /*   By: jlima-de < jlima-de@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 18:03:37 by jlima-de          #+#    #+#             */
-/*   Updated: 2025/04/16 17:38:52 by jlima-de         ###   ########.fr       */
+/*   Updated: 2025/04/29 15:53:35 by jlima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-    size_t i;
-	
+	size_t	i;
+
 	i = 0;
-    while (i < n)
-    {
-        ((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-        i++;
-    }
-		return (dest);
+	while (i < n)
+	{
+		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+		i++;
+	}
+	return (dest);
 }

@@ -6,7 +6,7 @@
 /*   By: jlima-de < jlima-de@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 17:51:38 by jlima-de          #+#    #+#             */
-/*   Updated: 2025/04/16 17:39:26 by jlima-de         ###   ########.fr       */
+/*   Updated: 2025/04/29 15:51:14 by jlima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)

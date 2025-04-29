@@ -6,16 +6,15 @@
 /*   By: jlima-de < jlima-de@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 17:42:17 by jlima-de          #+#    #+#             */
-/*   Updated: 2025/04/22 22:10:02 by jlima-de         ###   ########.fr       */
+/*   Updated: 2025/04/29 17:14:12 by jlima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-static int len_nbr(long n)
+static int	len_nbr(long n)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (n < 0)
@@ -45,7 +44,7 @@ static char	*itoa_nbr(char *str, int n)
 	}
 	if (nbr == 0)
 	{
-		str[i] = '0';
+		str[0] = '0';
 	}
 	while (nbr > 0)
 	{
@@ -56,17 +55,12 @@ static char	*itoa_nbr(char *str, int n)
 	return (str);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *str;
+	char	*str;
 
-	str = malloc((len_nbr(n) + 1) * sizeof(char *));
+	str = malloc((len_nbr(n) + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
 	return (itoa_nbr(str, n));
-}
-
-int	main()
-{
-	printf("%s\n", ft_itoa(42));
 }

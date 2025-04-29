@@ -5,10 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlima-de < jlima-de@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/11 12:02:31 by jlima-de          #+#    #+#             */
-/*   Updated: 2025/04/11 12:02:31 by jlima-de         ###   ########.fr       */
+/*   Created: 2025/04/29 15:48:31 by jlima-de          #+#    #+#             */
+/*   Updated: 2025/04/29 15:48:31 by jlima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

@@ -6,13 +6,13 @@
 /*   By: jlima-de < jlima-de@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 18:06:35 by jlima-de          #+#    #+#             */
-/*   Updated: 2025/04/16 18:11:30 by jlima-de         ###   ########.fr       */
+/*   Updated: 2025/04/29 16:34:50 by jlima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c += 32;

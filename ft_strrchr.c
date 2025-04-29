@@ -6,7 +6,7 @@
 /*   By: jlima-de < jlima-de@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 14:09:58 by jlima-de          #+#    #+#             */
-/*   Updated: 2025/04/16 17:42:55 by jlima-de         ###   ########.fr       */
+/*   Updated: 2025/04/29 16:34:23 by jlima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ char	*ft_strrchr(const char *str, int c)
 			return ((char *)&str[len]);
 		len--;
 	}
-return (NULL);
+	if ((char)c == '\0' && str[len] == '\0')
+		return ((char *)&str[len]);
+	return (NULL);
 }

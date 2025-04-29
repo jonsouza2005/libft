@@ -1,23 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlima-de < jlima-de@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/14 17:58:21 by jlima-de          #+#    #+#             */
-/*   Updated: 2025/04/29 16:33:56 by jlima-de         ###   ########.fr       */
+/*   Created: 2025/04/24 23:16:22 by jlima-de          #+#    #+#             */
+/*   Updated: 2025/04/29 20:47:03 by jlima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t	count;
+	t_list	*tmplst;
+	t_list	*newlst;
 
-	count = 0;
-	while (str[count])
-		count++;
-	return (count);
+	if (!lst || !f || !del)
+		return (NULL);
+	newlst = NULL;
+	while (lst)
+	{
+		tmplst = ft_lstnew(f(lst->content));
+		if (!tmplst)
+		{
+			ft_lstclear(&newlst, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&newlst, tmplst);
+		lst = lst->next;
+	}
+	return (newlst);
 }

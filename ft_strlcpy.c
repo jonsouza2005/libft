@@ -6,7 +6,7 @@
 /*   By: jlima-de < jlima-de@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 17:52:30 by jlima-de          #+#    #+#             */
-/*   Updated: 2025/04/16 17:54:08 by jlima-de         ###   ########.fr       */
+/*   Updated: 2025/04/29 16:33:50 by jlima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	size_t i;
-	
+	size_t	i;
+
 	i = 0;
 	if (size != 0)
 	{

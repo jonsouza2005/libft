@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlima-de < jlima-de@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/22 17:42:56 by jlima-de          #+#    #+#             */
-/*   Updated: 2025/04/22 17:42:56 by jlima-de         ###   ########.fr       */
+/*   Created: 2025/04/29 15:46:57 by jlima-de          #+#    #+#             */
+/*   Updated: 2025/04/29 15:46:57 by jlima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t count_words(char const *s, char c)
+static size_t	count_words(char const *s, char c)
 {
 	size_t	count;
 	size_t	check;
@@ -33,11 +33,10 @@ static size_t count_words(char const *s, char c)
 	return (count);
 }
 
-static	char *new_word(char const *s, char c)
+static char	*new_word(char const *s, char c)
 {
 	char	*str;
 	size_t	len;
-
 
 	len = 0;
 	while (s[len] != c && s[len])
@@ -51,7 +50,7 @@ static	char *new_word(char const *s, char c)
 	return (str);
 }
 
-static void ft_free(char **str)
+static void	ft_free(char **str)
 {
 	size_t	i;
 
@@ -64,10 +63,10 @@ static void ft_free(char **str)
 	free(str);
 }
 
-static	char **new_split(char **str, char const *s, char c)
+static char	**new_split(char **str, char const *s, char c)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
@@ -92,7 +91,7 @@ static	char **new_split(char **str, char const *s, char c)
 	return (str);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**str;
 
